@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-07-07T12:57:39+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jake Stanley</title><entry><title type="html">Jekyll</title><link href="http://localhost:4000/development/2021/07/07/jekyll.html" rel="alternate" type="text/html" title="Jekyll" /><published>2021-07-07T00:00:00+01:00</published><updated>2021-07-07T00:00:00+01:00</updated><id>http://localhost:4000/development/2021/07/07/jekyll</id><content type="html" xml:base="http://localhost:4000/development/2021/07/07/jekyll.html">&lt;p&gt;Migrated my site over to the Jekyll framework. Hexo was good but Jekyll is far more mature and is much more flexible.&lt;/p&gt;</content><author><name></name></author><category term="development" /><summary type="html">Migrated my site over to the Jekyll framework. Hexo was good but Jekyll is far more mature and is much more flexible.</summary></entry><entry><title type="html">QuakeSpasm on macOS</title><link href="http://localhost:4000/gaming/2021/03/25/Quake.html" rel="alternate" type="text/html" title="QuakeSpasm on macOS" /><published>2021-03-25T10:00:00+00:00</published><updated>2021-03-25T10:00:00+00:00</updated><id>http://localhost:4000/gaming/2021/03/25/Quake</id><content type="html" xml:base="http://localhost:4000/gaming/2021/03/25/Quake.html">&lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
+
+&lt;p&gt;Install QuakeSpasm with brew&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew update
+brew install quakespasm
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I wanted to install Quake to get the Id1 files to play using QuakeSpasm, but Steam won’t let me install it on Mac as it’s Windows only, so I had to do the following:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew install steamcmd
+steamcmd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You’ll now be in the steam shell.&lt;/p&gt;
+
+&lt;p&gt;Note that for the following to work you’ll have to either log in via the Steam shell or the Steam desktop client. From here I assume that you have done so. Substitute username accordingly.&lt;/p&gt;
+
+&lt;p&gt;You’ll need to own Quake on Steam or this won’t work.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;login username
+force_install_dir /Users/jake/.steamcmd/quake
+@sSteamCmdForcePlatformType windows
+app_update 2310 validate
+exit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@sSteamCmdForcePlatformType windows&lt;/code&gt; forces SteamCMD to install Windows apps&lt;/p&gt;
+
+&lt;p&gt;Then you’ll need to link the Id1 folder&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ln -s /Users/jake/.steamcmd/quake/Id1 /Applications/QuakeSpasm/Id1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;mods&quot;&gt;Mods&lt;/h1&gt;
+
+&lt;p&gt;Unpack mods to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Applications/QuakeSpasm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/quake-1.png&quot; alt=&quot;&quot; title=&quot;Applications directory structure for QuakeSpasm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And then run QuakeSpasm and specify “game” in the command line parameters.&lt;/p&gt;
+
+&lt;p&gt;In my case it’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-game ad_v1_80p1final&lt;/code&gt; which is the fantastical &lt;a href=&quot;https://www.moddb.com/mods/arcane-dimensions&quot;&gt;Arcane Dimensions mod&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/quake-2.png&quot; alt=&quot;&quot; title=&quot;Launch configuration for QuakeSpasm with mods&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="gaming" /><summary type="html">Installation</summary></entry><entry><title type="html">Geometry buttons in Phaser 3</title><link href="http://localhost:4000/development/2019/07/13/Geometry-buttons-in-Phaser-3.html" rel="alternate" type="text/html" title="Geometry buttons in Phaser 3" /><published>2019-07-13T01:36:34+01:00</published><updated>2019-07-13T01:36:34+01:00</updated><id>http://localhost:4000/development/2019/07/13/Geometry-buttons-in-Phaser-3</id><content type="html" xml:base="http://localhost:4000/development/2019/07/13/Geometry-buttons-in-Phaser-3.html">&lt;p&gt;Given the constants&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    const BUTTON_WIDTH: number = 80;
+    const BUTTON_HEIGHT: number = 20;
+    const TEXT_FONT = {
+        fontFamily: &quot;Ubuntu Mono&quot;,
+    };
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Create an instance of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GameObjects.Rectangle&lt;/code&gt; and some descriptive text if you prefer.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    var btn_rect: Phaser.GameObjects.Rectangle = this.add
+        .rectangle(20 + BUTTON_WIDTH/2, 20 + BUTTON_HEIGHT/2, 80, 20, 0xff0000, 1);
+    var btn_text: Phaser.GameObjects.Text = this.add
+        .text(btn_rect.getTopLeft().x+20, btn_rect.getTopLeft().y, 'Repair', TEXT_FONT);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Then create some event handlers from the output of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setInteractive&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    var btn_handler = btn_rect.setInteractive();
+
+    btn_handler.on(Phaser.Input.Events.POINTER_OVER, function() {
+        btn_rect.setAlpha(0.8);
+    });
+
+    btn_handler.on(Phaser.Input.Events.POINTER_OUT, function() {
+        btn_rect.setAlpha(1);
+    });
+
+    btn_handler.on(Phaser.Input.Events.POINTER_DOWN, function() {
+        // even less alpha for when the button is ACTUALLY being clicked
+        btn_rect.setAlpha(0.6);
+    });
+
+    btn_handler.on(Phaser.Input.Events.POINTER_UP, function() {
+        btn_rect.setAlpha(0.8);
+        repairs++; // or whatever you want your button to do
+    });
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For bonus points, wrap it in a class/function of its own.&lt;/p&gt;</content><author><name></name></author><category term="development" /><summary type="html">Given the constants const BUTTON_WIDTH: number = 80; const BUTTON_HEIGHT: number = 20; const TEXT_FONT = { fontFamily: &quot;Ubuntu Mono&quot;, }; Create an instance of GameObjects.Rectangle and some descriptive text if you prefer.</summary></entry></feed>
